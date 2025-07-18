@@ -1,0 +1,158 @@
+[17-Jul-2025 23:44:36 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[17-Jul-2025 23:44:36 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[17-Jul-2025 23:44:36 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[17-Jul-2025 23:44:36 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[17-Jul-2025 23:44:36 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[17-Jul-2025 23:44:48 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[17-Jul-2025 23:44:48 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[17-Jul-2025 23:44:48 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[17-Jul-2025 23:44:48 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[17-Jul-2025 23:44:48 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[17-Jul-2025 23:44:48 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[17-Jul-2025 23:44:48 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[17-Jul-2025 23:44:48 America/Santiago] CFM Dashboard: Productos cargados - Total: 1
+[17-Jul-2025 23:44:50 America/Santiago] CFM Edit: Conexión BD exitosa
+[17-Jul-2025 23:44:50 America/Santiago] CFM Edit: Producto cargado - ID: 3, Nombre: Ojo de tigre y cornalina
+[17-Jul-2025 23:45:01 America/Santiago] CFM Edit: Conexión BD exitosa
+[17-Jul-2025 23:45:01 America/Santiago] CFM Edit: Producto cargado - ID: 3, Nombre: Ojo de tigre y cornalina
+[17-Jul-2025 23:45:01 America/Santiago] CFM Edit: Datos recibidos - Nombre: 'Ojo de tigre y cornalina', Precio: 9999, Categoria: 'collares'
+[17-Jul-2025 23:45:01 America/Santiago] CFM Edit: Nueva imagen recibida - Nombre: producto_1752294237_6871e35d06750.webp, Tipo: image/webp
+[17-Jul-2025 23:45:01 America/Santiago] CFM Edit: Nueva imagen guardada: ../img/productos/producto_1752810301_6879c33d19d58.webp
+[17-Jul-2025 23:45:01 America/Santiago] CFM Edit: Producto ID 3 actualizado exitosamente
+[17-Jul-2025 23:45:01 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[17-Jul-2025 23:45:01 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[17-Jul-2025 23:45:01 America/Santiago] CFM Dashboard: Productos cargados - Total: 1
+[18-Jul-2025 00:23:09 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 00:23:09 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 00:23:09 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 00:23:09 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 00:23:09 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[18-Jul-2025 14:04:07 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 14:04:07 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 14:04:07 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 14:04:07 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 14:04:07 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[18-Jul-2025 14:04:19 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 14:04:19 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 14:04:19 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 14:04:19 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 14:04:19 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[18-Jul-2025 14:04:19 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:04:19 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:04:19 America/Santiago] CFM Dashboard: Productos cargados - Total: 1
+[18-Jul-2025 14:04:25 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:04:25 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:04:25 America/Santiago] CFM Dashboard: Productos cargados - Total: 1
+[18-Jul-2025 14:34:37 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 14:34:37 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 14:34:37 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 14:34:37 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 14:34:37 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[18-Jul-2025 14:34:56 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 14:34:56 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 14:34:56 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 14:34:56 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 14:34:56 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[18-Jul-2025 14:34:56 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:34:56 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:34:56 America/Santiago] CFM Dashboard: Productos cargados - Total: 1
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Intentando conectar a BD - Host: localhost, User: cfmjoyas_cfmuser, DB: cfmjoyas_cfmjoyas
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Conexión BD exitosa
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Usuario autenticado - ID: 1
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: POST data: Array
+(
+    [nombre] => Punto de Luz
+    [precio] => 9999999999
+    [categoria] => pulseras
+    [instagram] => https://www.instagram.com/p/DJPWdzuR3W6/
+)
+
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: FILES data: Array
+(
+    [imagen] => Array
+        (
+            [name] => Screenshot_20250718_153602_Instagram.jpg
+            [full_path] => Screenshot_20250718_153602_Instagram.jpg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpzPIKd5
+            [error] => 0
+            [size] => 347977
+        )
+
+)
+
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Datos procesados - Nombre: 'Punto de Luz', Precio: 9999999999, Categoria: 'pulseras', Instagram: 'https://www.instagram.com/p/DJPWdzuR3W6/'
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Imagen recibida - Nombre: Screenshot_20250718_153602_Instagram.jpg, Tamaño: 347977, Tipo: image/jpeg
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Verificando categoría 'pulseras' - Encontradas: 1
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Rutas - Relativa: ../img/productos/, Absoluta: /home3/cfmjoyas/public_html/img/productos/
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Archivo: producto_1752863803_687a943b83941.jpg, Ruta completa: ../img/productos/producto_1752863803_687a943b83941.jpg
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Moviendo archivo de /tmp/phpzPIKd5 a ../img/productos/producto_1752863803_687a943b83941.jpg
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Imagen guardada exitosamente en: ../img/productos/producto_1752863803_687a943b83941.jpg
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Archivo verificado - Tamaño: 347977 bytes
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Insertando en BD - Nombre: 'Punto de Luz', Precio: 9999999999, Categoria: 'pulseras', Instagram: 'https://www.instagram.com/p/DJPWdzuR3W6/', Imagen: 'img/productos/producto_1752863803_687a943b83941.jpg'
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: ¡ÉXITO! Producto creado - ID: 4
+[18-Jul-2025 14:36:43 America/Santiago] CFM Upload: Redirigiendo a dashboard.php
+[18-Jul-2025 14:36:43 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:36:43 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:36:43 America/Santiago] CFM Dashboard: Productos cargados - Total: 2
+[18-Jul-2025 14:36:49 America/Santiago] CFM Edit: Conexión BD exitosa
+[18-Jul-2025 14:36:49 America/Santiago] CFM Edit: Producto cargado - ID: 3, Nombre: Ojo de tigre y cornalina
+[18-Jul-2025 14:36:59 America/Santiago] CFM Edit: Conexión BD exitosa
+[18-Jul-2025 14:36:59 America/Santiago] CFM Edit: Producto cargado - ID: 3, Nombre: Ojo de tigre y cornalina
+[18-Jul-2025 14:36:59 America/Santiago] CFM Edit: Datos recibidos - Nombre: 'Ojo de tigre y cornalina', Precio: 99999999999, Categoria: 'collares'
+[18-Jul-2025 14:36:59 America/Santiago] CFM Edit: Producto ID 3 actualizado exitosamente
+[18-Jul-2025 14:36:59 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:36:59 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:36:59 America/Santiago] CFM Dashboard: Productos cargados - Total: 2
+[18-Jul-2025 14:38:50 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 14:38:50 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 14:38:50 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 14:38:50 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 14:38:50 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18
+[18-Jul-2025 14:38:50 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:38:50 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:38:50 America/Santiago] CFM Dashboard: Productos cargados - Total: 2
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Intentando conectar a BD - Host: localhost, User: cfmjoyas_cfmuser, DB: cfmjoyas_cfmjoyas
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Conexión BD exitosa
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Usuario autenticado - ID: 1
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: POST data: Array
+(
+    [nombre] => Perlas de rio y colgante de cristal murano
+    [precio] => 999999999
+    [categoria] => pulseras
+    [instagram] => https://www.instagram.com/p/DJPWdzuR3W6/
+)
+
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: FILES data: Array
+(
+    [imagen] => Array
+        (
+            [name] => Screenshot_20250718_153844_Instagram.jpg
+            [full_path] => Screenshot_20250718_153844_Instagram.jpg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpmdboXv
+            [error] => 0
+            [size] => 649415
+        )
+
+)
+
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Datos procesados - Nombre: 'Perlas de rio y colgante de cristal murano', Precio: 999999999, Categoria: 'pulseras', Instagram: 'https://www.instagram.com/p/DJPWdzuR3W6/'
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Imagen recibida - Nombre: Screenshot_20250718_153844_Instagram.jpg, Tamaño: 649415, Tipo: image/jpeg
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Verificando categoría 'pulseras' - Encontradas: 1
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Rutas - Relativa: ../img/productos/, Absoluta: /home3/cfmjoyas/public_html/img/productos/
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Archivo: producto_1752863978_687a94eacb300.jpg, Ruta completa: ../img/productos/producto_1752863978_687a94eacb300.jpg
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Moviendo archivo de /tmp/phpmdboXv a ../img/productos/producto_1752863978_687a94eacb300.jpg
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Imagen guardada exitosamente en: ../img/productos/producto_1752863978_687a94eacb300.jpg
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Archivo verificado - Tamaño: 649415 bytes
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Insertando en BD - Nombre: 'Perlas de rio y colgante de cristal murano', Precio: 999999999, Categoria: 'pulseras', Instagram: 'https://www.instagram.com/p/DJPWdzuR3W6/', Imagen: 'img/productos/producto_1752863978_687a94eacb300.jpg'
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: ¡ÉXITO! Producto creado - ID: 5
+[18-Jul-2025 14:39:38 America/Santiago] CFM Upload: Redirigiendo a dashboard.php
+[18-Jul-2025 14:39:39 America/Santiago] CFM Dashboard: Conexión BD exitosa
+[18-Jul-2025 14:39:39 America/Santiago] CFM Dashboard: Autenticado por SESIÓN - user_id: 1
+[18-Jul-2025 14:39:39 America/Santiago] CFM Dashboard: Productos cargados - Total: 3
+[18-Jul-2025 16:23:45 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 14
+[18-Jul-2025 16:23:45 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 15
+[18-Jul-2025 16:23:45 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 16
+[18-Jul-2025 16:23:45 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 17
+[18-Jul-2025 16:23:45 America/Santiago] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home3/cfmjoyas/public_html/includes/db.php on line 18

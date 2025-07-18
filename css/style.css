@@ -1,0 +1,561 @@
+/* ===== FIXES CRÍTICOS DE COMPATIBILIDAD ===== */
+/* Box-sizing global - CRÍTICO para consistencia */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Essential typography - Keep Playfair Display for unique branding */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  color: #333;
+  padding-top: 76px;
+}
+
+/* Smooth scroll con offset para navbar fija */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Unique header styling that can't be replicated with Bootstrap */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2c2c2c;
+}
+
+/* Ajustar padding del body para el navbar fixed */
+  body {
+    padding-top: 76px;
+  }
+  
+  
+  /* Mejorar el logo */
+  .navbar-brand img {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  
+  .navbar-brand:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Mejorar los links */
+  .navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+  }
+  
+  /* Línea amarilla al hover */
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #ffd700;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    width: 80%;
+    left: 10%;
+  }
+  
+  /* Fix para móvil */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      margin-top: 1rem;
+    }
+    
+    .navbar-nav {
+      text-align: center;
+      padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+      padding: 0.75rem 0 !important;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .navbar-nav .nav-link:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  /* Mejorar el botón hamburguesa */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+  }
+/* Essential header styling */
+.header-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 4rem !important;
+  font-weight: 600 !important;
+  color: #2c2c2c;
+  letter-spacing: 1px;
+  line-height: 1.2 !important;
+}
+
+/* Essential section styling */
+section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #ffd700, #ffb347);
+  border-radius: 2px;
+}
+
+
+ /* Estilos mínimos para mejorar las tarjetas */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  
+  /* Fix para navegadores que no soportan object-fit */
+  @supports not (object-fit: cover) {
+    .ratio img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  /* Asegurar 2 columnas en móvil */
+  @media (max-width: 576px) {
+    .col-6 {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    
+    .row.g-4 {
+      --bs-gutter-x: 1rem;
+      --bs-gutter-y: 1rem;
+    }
+  }
+  
+  /* Z-index para el badge */
+  .z-index-1 {
+    z-index: 1;
+  }
+
+/* Category colors mejorados */
+.category-badge[data-category="joyas"],
+.category-badge[data-category="collares"] {
+  background: linear-gradient(45deg, #ffd700, #ffb347) !important;
+  color: #000 !important;
+}
+
+.category-badge[data-category="ceramicas"] {
+  background: linear-gradient(45deg, #d35400, #e67e22) !important;
+  color: white !important;
+}
+
+.category-badge[data-category="otros"] {
+  background: linear-gradient(45deg, #2c3e50, #34495e) !important;
+  color: white !important;
+}
+
+.category-badge[data-category="pulseras"] {
+  background: linear-gradient(45deg, #c0392b, #e74c3c) !important;
+  color: white !important;
+}
+
+.category-badge[data-category="aretes"] {
+  background: linear-gradient(45deg, #2980b9, #3498db) !important;
+  color: white !important;
+}
+
+.category-badge[data-category="anillos"] {
+  background: linear-gradient(45deg, #16a085, #1abc9c) !important;
+  color: white !important;
+}
+
+/* Essential category filter styling */
+.category-filter {
+  background: linear-gradient(135deg, #000 0%, #2c2c2c 100%) !important;
+  color: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255, 215, 0, 0.2);
+}
+
+.category-filter h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #ffd700 !important;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: rgba(255, 215, 0, 0.1) !important;
+  border: 2px solid rgba(255, 215, 0, 0.3) !important;
+  color: white !important;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: linear-gradient(45deg, #ffd700, #ffb347) !important;
+  color: #000 !important;
+  transform: translateY(-3px) scale(1.05);
+  -webkit-transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  border-color: #ffd700 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Ajustes para filtros en móvil */
+@media (max-width: 576px) {
+  .category-filter {
+    padding: 15px;
+  }
+  
+  .category-filter h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .filter-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    margin: 3px;
+  }
+}
+
+/* Admin button styling */
+.admin-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999; /* Menor que el navbar */
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.admin-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  -webkit-transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,123,255,0.6);
+  background: linear-gradient(45deg, #0056b3, #003d82);
+}
+
+/* ===== TYPOGRAPHY RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .lead {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* ===== FORM STYLES ===== */
+.form-control,
+.form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* ===== UTILITIES ===== */
+/* Loading state para imágenes */
+img[src=""] {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(90deg, #f8f9fa 0px, #e9ecef 40px, #f8f9fa 80px);
+  background-size: 200% 100%;
+  animation: imageLoading 1.5s infinite;
+}
+
+@keyframes imageLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Animación para productos */
+.product-link {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.product-link.visible {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CROSS-BROWSER FIXES ===== */
+/* Firefox specific */
+@-moz-document url-prefix() {
+  .carousel-img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  .product-card {
+    will-change: transform;
+  }
+  
+  .product-image {
+    image-rendering: auto;
+  }
+}
+
+/* Safari specific */
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .carousel-image-container {
+      height: 75vh;
+      height: -webkit-fill-available;
+    }
+    
+    .product-card {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+    
+    .product-image-wrapper {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+}
+
+/* Edge/IE specific */
+@supports (-ms-ime-align:auto) {
+  .carousel-image-container {
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+  }
+  
+  .products-grid {
+    display: -ms-grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-gap: 25px;
+  }
+}
+
+/* Chrome specific fixes */
+.browser-chrome .product-card {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.carousel-img,
+.product-image {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .admin-btn,
+  .navbar,
+  #contacto form,
+  .carousel-control-prev,
+  .carousel-control-next,
+  .filter-btn {
+    display: none !important;
+  }
+  
+  .product-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+/* Focus visible para teclado */
+*:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+/* ===== ANIMACIONES MEJORADAS ===== */
+/* Hover suave para enlaces */
+a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Transiciones para botones */
+.btn {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+<!-- Agregar estos estilos justo después de la sección de productos -->
+<style>
+  /* ===== FIX PARA CENTRAR EN MÓVIL ===== */
+  
+  /* Estilos existentes */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  
+  /* Fix para navegadores que no soportan object-fit */
+  @supports not (object-fit: cover) {
+    .ratio img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  /* ===== NUEVO FIX PARA CENTRADO EN MÓVIL ===== */
+  @media (max-width: 576px) {
+    /* Centrar el contenedor de productos */
+    #productos .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+    /* Asegurar que el row esté centrado */
+    #productos .row {
+      margin-left: -8px;
+      margin-right: -8px;
+      justify-content: center;
+    }
+    
+    /* Ajustar columnas */
+    #productos .col-6 {
+      padding-left: 8px;
+      padding-right: 8px;
+      max-width: 170px; /* Limitar ancho máximo en móvil */
+    }
+    
+    /* Si solo hay 1 producto, centrarlo */
+    #productos .row:has(.col-6:only-child) {
+      justify-content: center;
+    }
+    
+    #productos .row:has(.col-6:only-child) .col-6 {
+      max-width: 200px;
+    }
+    
+    /* Reducir espacio entre filas */
+    #productos .row.g-4 {
+      --bs-gutter-y: 1rem;
+    }
+  }
+  
+  /* Para pantallas muy pequeñas */
+  @media (max-width: 360px) {
+    #productos .col-6 {
+      max-width: 150px;
+    }
+  }
+  
+  /* Z-index para el badge */
+  .z-index-1 {
+    z-index: 1;
+  }
+  
+  /* Mejorar el badge en móvil */
+  @media (max-width: 576px) {
+    .badge {
+      font-size: 0.7rem !important;
+      padding: 0.25rem 0.5rem !important;
+    }
+  }
