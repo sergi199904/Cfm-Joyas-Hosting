@@ -86,6 +86,12 @@ cp .env.example .env
 nano .env
 ```
 
+**IMPORTANTE**: Configure todas las variables requeridas:
+- Credenciales de base de datos
+- Códigos de acceso del sistema  
+- Clave secreta para autenticación
+- Configuración de email (opcional)
+
 ### 6. Configurar Directorio de Imágenes
 ```bash
 mkdir -p img/productos img/carrusel
@@ -109,15 +115,35 @@ chmod 755 img/productos img/carrusel
 - Sistema de categorías dinámico
 - Filtrado automático en frontend
 
-## 🔑 Credenciales de Acceso
+## 🔧 Configuración Inicial
 
-### Usuario Administrador
-- **Email**: `admin@cfmjoyas.com`
-- **Contraseña**: `admin123`
-- **Código de Acceso**: `CFM2025` (o `JOYAS2025`, `ADMIN2025`)
+### Configuración de Variables de Entorno
+1. Copie el archivo `.env.example` a `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Configure las variables de entorno en el archivo `.env`:
+   ```env
+   # Database Configuration
+   DB_HOST=localhost
+   DB_USERNAME=your_database_user
+   DB_PASSWORD=your_database_password
+   DB_DATABASE=your_database_name
+   
+   # Access Codes (comma-separated)
+   ACCESS_CODES=CODE1,CODE2,CODE3
+   
+   # Security Settings
+   AUTH_SECRET_KEY=your_unique_secret_key_here
+   ```
+
+3. **IMPORTANTE**: Nunca suba el archivo `.env` al repositorio. Las credenciales deben mantenerse en el servidor de producción únicamente.
 
 ### Panel de Administración
 Accede en: `/admin/login.php`
+
+**Nota de Seguridad**: Los códigos de acceso y credenciales de base de datos están configurados via variables de entorno para mayor seguridad.
 
 ## 📁 Estructura del Proyecto
 

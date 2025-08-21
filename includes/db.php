@@ -1,8 +1,18 @@
 <?php
 // =======================================================
 // CONFIGURACIÓN DE BASE DE DATOS PARA HOSTGATOR - CFM JOYAS
-// includes/db.php - VERSIÓN CORREGIDA COMPLETA
+// includes/db.php - VERSIÓN SEGURA CON VARIABLES DE ENTORNO
 // =======================================================
+
+// Cargar variables de entorno
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+// Cargar configuración desde .env si existe
+$dotenv_path = dirname(__DIR__) . '/.env';
+if (file_exists($dotenv_path)) {
+    $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+    $dotenv->load();
+}
 
 // *** SOLUCIÓN PARA SESIONES EN HOSTGATOR ***
 $session_dir = dirname(__DIR__) . '/tmp/sessions';
@@ -23,11 +33,18 @@ error_reporting(E_ALL & ~E_NOTICE);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/../error_log');
 
-// CONFIGURACIÓN PARA HOSTGATOR - DOMINIO: cfmjoyas.cl
-$host = 'localhost';
-$username = 'cfmjoyas_cfmuser';
-$password = '4-gt?YU1;1xS';
-$database = 'cfmjoyas_cfmjoyas';
+// CONFIGURACIÓN DE BASE DE DATOS - USANDO VARIABLES DE ENTORNO
+// IMPORTANTE: Las credenciales deben estar en el archivo .env y nunca en el código
+$host = $_ENV['DB_HOST'] ?? 'localhost';
+$username = $_ENV['DB_USERNAME'] ?? '';
+$password = $_ENV['DB_PASSWORD'] ?? '';
+$database = $_ENV['DB_DATABASE'] ?? '';
+
+// Verificar que las credenciales estén configuradas
+if (empty($username) || empty($password) || empty($database)) {
+    error_log("CFM Joyas: Error - Variables de entorno de BD no configuradas");
+    die("Error de configuración. Contacte al administrador.");
+}
 
 // Crear conexión con manejo de errores mejorado
 try {
@@ -54,7 +71,14 @@ function limpiar_input($data) {
 }
 
 function validar_codigo_acceso($codigo) {
-    $codigos_validos = ['CFM2025', 'JOYAS2025', 'ADMIN2025'];
+    // IMPORTANTE: Los códigos de acceso deben estar en variables de entorno, nunca en el código
+    $codigos_env = $_ENV['ACCESS_CODES'] ?? '';
+    if (empty($codigos_env)) {
+        error_log("CFM Joyas: Error - Códigos de acceso no configurados en variables de entorno");
+        return false;
+    }
+    
+    $codigos_validos = array_map('trim', explode(',', $codigos_env));
     return in_array($codigo, $codigos_validos);
 }
 
@@ -98,7 +122,14 @@ function limpiar_intentos($email) {
 // FUNCIONES DE AUTENTICACIÓN CON COOKIES (ALTERNATIVA)
 // =======================================================
 function createAuthCookie($user_id, $user_name, $user_email) {
-    $secret_key = 'CFM_JOYAS_SECRET_2025_' . $user_id; // Clave única por usuario
+    // IMPORTANTE: La clave secreta debe estar en variables de entorno, nunca en el código
+    $base_secret = $_ENV['AUTH_SECRET_KEY'] ?? '';
+    if (empty($base_secret)) {
+        error_log("CFM Joyas: Error - Clave secreta no configurada en variables de entorno");
+        return false;
+    }
+    
+    $secret_key = $base_secret . '_' . $user_id; // Clave única por usuario
     $expire_time = time() + 3600; // 1 hora
     
     $data = json_encode([
@@ -138,7 +169,7 @@ function verifyAuthCookie() {
             return false;
         }
         
-        $secret_key = 'CFM_JOYAS_SECRET_2025_' . $auth_data['user_id'];
+        $secret_key = ($_ENV['AUTH_SECRET_KEY'] ?? '') . '_' . $auth_data['user_id'];
         
         // Verificar firma
         if (!hash_equals(hash_hmac('sha256', $data, $secret_key), $signature)) {

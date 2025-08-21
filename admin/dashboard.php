@@ -18,26 +18,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// CONEXIÓN DIRECTA A BASE DE DATOS (SIN INCLUDES)
-$host = 'localhost';
-$username = 'cfmjoyas_cfmuser';
-$password = '4-gt?YU1;1xS';
-$database = 'cfmjoyas_cfmjoyas';
-
-try {
-    $conn = new mysqli($host, $username, $password, $database);
-    $conn->set_charset("utf8");
-    error_log("CFM Dashboard: Conexión BD exitosa");
-} catch (mysqli_sql_exception $e) {
-    error_log("CFM Dashboard: Error BD: " . $e->getMessage());
-    die("Error de conexión a la base de datos. Intente más tarde.");
-}
-
-// FUNCIONES NECESARIAS
-function limpiar_input($data) {
-    global $conn;
-    return mysqli_real_escape_string($conn, trim(htmlspecialchars($data)));
-}
+// CONFIGURACIÓN DE BASE DE DATOS - USAR INCLUDES CENTRALIZADO
+// IMPORTANTE: Las credenciales están ahora en variables de entorno, no en el código
+require_once __DIR__ . '/../includes/db.php';
 
 function verifyAuthCookie() {
     if (!isset($_COOKIE['cfm_auth'])) {
