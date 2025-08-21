@@ -1,7 +1,8 @@
 <?php
 // =======================================================
-// ADMIN LOGIN - CFM JOYAS - VERSIÓN FINAL COMPLETA
+// ADMIN LOGIN - CFM JOYAS - VERSIÓN SEGURA
 // admin/login.php
+// IMPORTANTE: Códigos de acceso ahora en variables de entorno
 // =======================================================
 
 // INICIAR SESIÓN DE FORMA SEGURA ANTES QUE NADA
@@ -82,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar código de acceso primero
         if (!validar_codigo_acceso($codigo_acceso)) {
             registrar_intento_fallido($email);
-            $error = 'Código de acceso inválido. Use: CFM2025, JOYAS2025 o ADMIN2025';
+            $error = 'Código de acceso inválido. Contacte al administrador para obtener un código válido.';
             error_log("CFM Invalid access code: $codigo_acceso for $email");
         } else {
             // Buscar usuario en la base de datos
@@ -309,10 +310,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <input type="text" name="codigo_acceso" id="codigo_acceso" class="form-control rounded-3" 
                                        style="background: rgba(255,255,255,0.9) !important; border: 2px solid rgba(255, 215, 0, 0.3) !important; padding: 12px 15px !important; transition: all 0.3s ease !important;"
                                        required 
-                                       placeholder="CFM2025, JOYAS2025 o ADMIN2025"
+                                       placeholder="Código de acceso requerido"
                                        value="<?= isset($_POST['codigo_acceso']) ? htmlspecialchars($_POST['codigo_acceso']) : '' ?>">
                                 <small class="text-light">
-                                    <i class="fas fa-info-circle"></i> Códigos válidos: CFM2025, JOYAS2025, ADMIN2025
+                                    <i class="fas fa-info-circle"></i> Solicite el código de acceso al administrador
                                 </small>
                             </div>
                             
@@ -429,13 +430,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             });
             
             codigo.addEventListener('input', function() {
-                const validCodes = ['CFM2025', 'JOYAS2025', 'ADMIN2025'];
-                if (validCodes.includes(this.value.toUpperCase())) {
+                // Removed client-side validation - codes are now in environment variables
+                // Validation is done server-side for security
+                if (this.value.length > 0) {
                     this.classList.remove('is-invalid');
                     this.classList.add('is-valid');
-                } else if (this.value.length > 0) {
-                    this.classList.add('is-invalid');
+                } else {
                     this.classList.remove('is-valid');
+                    this.classList.remove('is-invalid');
                 }
             });
         });

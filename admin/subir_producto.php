@@ -18,37 +18,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// CONFIGURACIÓN DIRECTA DE BD PARA HOSTGATOR - SIN INCLUDES
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
-// CREDENCIALES ESPECÍFICAS DE HOSTGATOR
-$host = 'localhost';
-$username = 'cfmjoyas_cfmuser';  // ← CONFIRMAR ESTE
-$password = '4-gt?YU1;1xS';      // ← CONFIRMAR ESTE  
-$database = 'cfmjoyas_cfmjoyas'; // ← CONFIRMAR ESTE
-
-// Log de intento de conexión
-error_log("CFM Upload: Intentando conectar a BD - Host: $host, User: $username, DB: $database");
-
-try {
-    $conn = new mysqli($host, $username, $password, $database);
-    $conn->set_charset("utf8");
-    
-    if ($conn->ping()) {
-        error_log("CFM Upload: Conexión BD exitosa");
-    } else {
-        error_log("CFM Upload: Conexión BD falló - ping failed");
-    }
-} catch (mysqli_sql_exception $e) {
-    error_log("CFM Upload: Error conexión BD: " . $e->getMessage());
-    die("Error de conexión a la base de datos: " . $e->getMessage());
-}
-
-// FUNCIONES NECESARIAS (copiar de includes/db.php)
-function limpiar_input($data) {
-    global $conn;
-    return mysqli_real_escape_string($conn, trim(htmlspecialchars($data)));
-}
+// CONFIGURACIÓN DE BASE DE DATOS - USAR INCLUDES CENTRALIZADO
+// IMPORTANTE: Las credenciales están ahora en variables de entorno, no en el código
+require_once __DIR__ . '/../includes/db.php';
 
 // VERIFICAR AUTENTICACIÓN SIMPLE
 if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {

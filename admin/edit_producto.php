@@ -18,64 +18,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// CONEXIÓN DIRECTA A BASE DE DATOS (SIN INCLUDES)
-$host = 'localhost';
-$username = 'cfmjoyas_cfmuser';
-$password = '4-gt?YU1;1xS';
-$database = 'cfmjoyas_cfmjoyas';
-
-try {
-    $conn = new mysqli($host, $username, $password, $database);
-    $conn->set_charset("utf8");
-    error_log("CFM Edit: Conexión BD exitosa");
-} catch (mysqli_sql_exception $e) {
-    error_log("CFM Edit: Error BD: " . $e->getMessage());
-    die("Error de conexión a la base de datos: " . $e->getMessage());
-}
-
-// Función de limpieza
-function limpiar_input($data) {
-    global $conn;
-    return mysqli_real_escape_string($conn, trim(htmlspecialchars($data)));
-}
-
-function verifyAuthCookie() {
-    if (!isset($_COOKIE['cfm_auth'])) {
-        return false;
-    }
-    
-    try {
-        $cookie_value = base64_decode($_COOKIE['cfm_auth']);
-        
-        if (strpos($cookie_value, '|') === false) {
-            return false;
-        }
-        
-        list($data, $signature) = explode('|', $cookie_value, 2);
-        $auth_data = json_decode($data, true);
-        
-        if (!$auth_data || !isset($auth_data['user_id'])) {
-            return false;
-        }
-        
-        $secret_key = 'CFM_JOYAS_SECRET_2025_' . $auth_data['user_id'];
-        
-        // Verificar firma
-        if (!hash_equals(hash_hmac('sha256', $data, $secret_key), $signature)) {
-            return false;
-        }
-        
-        // Verificar expiración
-        if ($auth_data['expire'] < time()) {
-            return false;
-        }
-        
-        return $auth_data;
-        
-    } catch (Exception $e) {
-        return false;
-    }
-}
+// CONFIGURACIÓN DE BASE DE DATOS - USAR INCLUDES CENTRALIZADO
+// IMPORTANTE: Las credenciales están ahora en variables de entorno, no en el código
+require_once __DIR__ . '/../includes/db.php';
 
 // VERIFICAR AUTENTICACIÓN
 $user_authenticated = false;

@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($password !== $confirm) {
         $error = 'Las contraseñas no coinciden.';
     } elseif (!validar_codigo_acceso($codigo_acceso)) {
-        $error = 'Código de acceso inválido. Use: CFM2025, JOYAS2025 o ADMIN2025';
+        $error = 'Código de acceso inválido. Contacte al administrador para obtener un código válido.';
     } else {
         // Verificar si el email ya existe
         $stmt = $conn->prepare("SELECT id FROM usuarios WHERE email = ?");
@@ -212,10 +212,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 
                                 <div class="code-help mt-2 p-3 rounded-3">
                                     <small class="text-light">
-                                        <i class="fas fa-info-circle"></i> <strong>Códigos válidos:</strong><br>
-                                        • <code class="px-2 py-1 rounded">CFM2025</code><br>
-                                        • <code class="px-2 py-1 rounded">JOYAS2025</code><br>
-                                        • <code class="px-2 py-1 rounded">ADMIN2025</code>
+                                        <i class="fas fa-info-circle"></i> <strong>Información:</strong><br>
+                                        • Solicite el código de acceso al administrador del sistema<br>
+                                        • El código es requerido para crear una nueva cuenta<br>
+                                        • Contacte a CFM Joyas para obtener acceso
                                     </small>
                                 </div>
                             </div>

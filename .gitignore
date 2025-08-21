@@ -1,0 +1,29 @@
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Dependencies
+vendor/
+
+# Logs
+error_log
+*.log
+
+# Temporary files
+tmp/sessions/
+tmp/*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
