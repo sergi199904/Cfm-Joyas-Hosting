@@ -6,13 +6,15 @@
 # Dependencies
 vendor/
 
-# Logs
+# Logs - CRÍTICO: Nunca subir logs
 error_log
 *.log
+logs/
 
 # Temporary files
 tmp/sessions/
 tmp/*.tmp
+tmp/
 
 # IDE files
 .vscode/
@@ -27,3 +29,8 @@ Thumbs.db
 # Backup files
 *.bak
 *.backup
+
+# Archivos sensibles adicionales
+composer.lock
+phpunit.xml
+.phpunit.result.cache

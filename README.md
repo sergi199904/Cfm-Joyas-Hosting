@@ -1,5 +1,14 @@
 # 💎 CFM Joyas - Sistema Web de Joyería
 
+## ⚠️ IMPORTANTE: SEGURIDAD
+
+**ANTES de usar este proyecto:**
+1. Lee el archivo [SECURITY.md](SECURITY.md)
+2. Cambia TODOS los códigos de acceso
+3. Genera nuevas claves secretas
+4. Nunca subas archivos .env o logs al repositorio
+
+
 **Sistema web completo para la gestión y venta de joyas, cerámicas y accesorios artesanales.**
 
 ![CFM Joyas](img/logooficial.jpg)
